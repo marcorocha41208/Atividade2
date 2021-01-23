@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt"> 
+<title>Atividade2</title>
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<!-- Container --> 
+<div class="container">
+  <h2>Collapse</h2>
+  <p>Clique na imagem para mostrar ou esconder o texto</p>
+  <img src="html.png" width="80" height="80" data-toggle="collapse" data-target="#demo">
+  <div id="demo" class="collapse in">
+    Texto Escondido
+	  <img src="html.png" width="60" height="60"  data-target="#demo">
+
+  </div>
+</div>
+
+<!-- Modal --> 
+<br>
+<div class="container">
+  <h2>Modal </h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+     Abrir Modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form>
+		 <input type="text" name="text1" id="text1">
+		 <br>
+		  <br>
+		 <input type="text" name="text2" id="text2">
+		 <br>
+		 <br>
+		 <button type="button" onclick='calculate()'> Resultado </button> 
+		 <br>
+		 <input id="resultado" /></td>
+		 </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+		
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<script>
+function calculate() {
+    var myBox1 = document.getElementById('text1').value; 
+    var myBox2 = document.getElementById('text2').value;
+    var resultado = document.getElementById('resultado'); 
+    var myResult = myBox1 * myBox2;
+     document.getElementById('resultado').value = myResult;
+	
+}
+
+</script>
+
+
+<!-- Nav --> 
+<br>
+<div class="container">
+  <h2>Nav</h2>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.ufp.pt/">UFP</a>
+    </li>
+    <li class="nav-item">
+	<a class="nav-link">
+      <input type="text" id="inputText"/>
+	  </a>
+    </li>
+    <li class="nav-item">
+	<a class="nav-link">
+    <input type="button" value="UpperCase" id="dispText" onClick='convertCase(inputText.value)'/>
+	
+	  </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">
+      <button type="button" onClick='fbackground1()'>Cor de Fundo</button>
+	  </a>
+    </li>
+  </ul>
+</div>
+
+
+<script type="text/javascript">
+	function convertCase(text){
+		var strUCase= text.toUpperCase();
+		document.getElementById("dispText").innerHTML = strUCase;
+		alert(strUCase);
+	}
+	
+	
+
+function fbackground1(){
+document.body.style.backgroundColor= "green";
+}
+</script>
+
+  </body>
+</html>
