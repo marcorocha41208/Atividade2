@@ -11,13 +11,67 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
-<!-- Container --> 
+<!-- Collapse --> 
 <div class="container">
   <h2>Collapse</h2>
-  <p>Clique na imagem para mostrar ou esconder o texto</p>
-  <img src="html.png" width="80" height="80" data-toggle="collapse" data-target="#demo">
+  <h5>Marco Rocha</h5>
+  <input type="button" value="Informacao" data-toggle="collapse" data-target="#demo">
   <div id="demo" class="collapse in">
-    Texto Escondido
+ Data Nascimento: 2 de Abril de 2002<br>
+ Local Nascimento: Hospital Sao Sebastiao<br>
+ Local de Residencia: Arcozelo, Vila Nova de Gaia<br> 
+ Atividades preferidas: Ver filmes e series, Nataçao, Ginasio, Jogar video-jogos, Ouvir musica<br>
+ Habilitacoes: 12ano<br>
+ Escolas frequentadas: Escola Basica do Corvo, Escola EB2/3 Sophia Mello Breyner,Escola Secundaria Dr. Manuel Gomes de Almeida<br>
+ Universidade: Universidade Fernando Pessoa<br>
+ Curso: Engenharia Informatica<br>
+ Saidas Profissionais: Desenvolvimento de software, Analista, administracao de redes e sistemas informaticos.<br>
+ Expectativas para o curso: Formaçao em Engenharia Informatica, Programador<br>
+
+	  <img src="html.png" width="60" height="60"  data-target="#demo">
+
+  </div>
+  </div>
+  
+  <br>
+  
+  <div class="container">
+  <h5>Maria Ines Gomes</h5>
+  <input type="button" value="Informacao" data-toggle="collapse" data-target="#demo2">
+  <div id="demo2" class="collapse in">
+ Data Nascimento: 7 de Novembro de 2002<br>
+ Local Nascimento: Hospital Santa Maria Maior<br>
+ Local de Residencia: Gamil, Barcelos<br> 
+ Atividades preferidas: Ver filmes e series, Ginasio, Ouvir musica<br>
+ Habilitacoes: 12ano<br>
+ Escolas frequentadas: Escola EB1 Goncalo Pereira, Colegio Didalvi, Conservatorio de Musica de Barcelos, Escola Secundaria de Barcelos, Externato Carvalho Araujo<br>
+ Universidade: Universidade Fernando Pessoa<br>
+ Curso: Engenharia Informatica<br>
+ Saidas Profissionais: Desenvolvimento de software, Analista, empresas de telecomunicacoes, administracao de redes e sistemas informaticos.<br>
+ Expectativas para o curso: Formaçao em Engenharia Informatica, Programador<br>
+ 
+	  <img src="html.png" width="60" height="60"  data-target="#demo">
+
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <h5>Barbara Martins</h5>
+  <input type="button" value="Informacao" data-toggle="collapse" data-target="#demo3">
+  <div id="demo3" class="collapse in">
+ Data Nascimento: 2 de Outubro de 2000<br>
+ Local Nascimento: Maternidade de Mafamude<br>
+ Local de Residencia: Sao Paio de Oleiros, Santa Maria da Feira<br>
+ Atividades preferidas: Ver filmes e series, Ouvir musica<br>
+ Habilitacoes: 12ano<br>
+ Escolas frequentadas: Escola EB1 do Loureiro, Escola EB2/3 Julio Dinis,Colegio de Lamas, Escola Secundaria Dr. Manuel Gomes de Almeida <br>
+ Universidade: Universidade Fernando Pessoa<br>
+ Curso: Engenharia Informatica<br>
+ Saidas Profissionais: Desenvolvimento de software, Analista, empresas de telecomunicacoes<br>
+ Expectativas para o curso: Formacao em Engenharia Informatica, Programador<br>
+
 	  <img src="html.png" width="60" height="60"  data-target="#demo">
 
   </div>
@@ -48,6 +102,7 @@
          <form>
 		 <input type="text" name="text1" id="text1">
 		 <br>
+		 x
 		  <br>
 		 <input type="text" name="text2" id="text2">
 		 <br>
@@ -103,7 +158,12 @@ function calculate() {
     </li>
     <li class="nav-item">
       <a class="nav-link">
-      <button type="button" onClick='fbackground1()'>Cor de Fundo</button>
+      <button type="button" onClick='fbackground1()'>Cor de Fundo Azul</button>
+	  </a>
+    </li>
+	 <li class="nav-item">
+      <a class="nav-link">
+      <button type="button" onClick='fbackground2()'>Resetar cor de fundo</button>
 	  </a>
     </li>
   </ul>
@@ -120,7 +180,11 @@ function calculate() {
 	
 
 function fbackground1(){
-document.body.style.backgroundColor= "green";
+document.body.style.backgroundColor= "#6698FF";
+}
+
+function fbackground2(){
+document.body.style.backgroundColor= "white";
 }
 </script>
 
